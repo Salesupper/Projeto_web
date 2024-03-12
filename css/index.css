@@ -45,3 +45,8 @@ footer{
   background-color: rgb(246, 9, 9);
   grid-column: 1/4;
 }
+
+img{
+    width: 100px;
+    height: 100px;
+}

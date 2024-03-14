@@ -1,7 +1,10 @@
 body{
-  background-color: blueviolet;  
+  background-image: url('../images/guy_water.jpg');  
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   color: white;
+  display: flexbox;
 }
 
 a, ul {
@@ -18,35 +21,41 @@ header > ul {
 li{
   margin-left: 20px;  
 }
-.container{
+
+/* .container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 10vh 70vh 20vh;
-}
+} */
 
 header{
   align-items: center;
   display: flex;
   justify-content: space-between;
-  background-color: brown;  
+  background-color: blue;  
   grid-column: 1/4;
   padding: 10px;  
 }
+
 main{
   background-color: chartreuse;  
 }
-aside{
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+/* aside{
   background-color: black;  
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-footer{
+} */
+
+/* footer{
   background-color: rgb(246, 9, 9);
   grid-column: 1/4;
-}
+} */
 
-img{
-    width: 100px;
-    height: 100px;
-}
+

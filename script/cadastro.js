@@ -20,14 +20,14 @@ async function cadastroUsuario(){
     if (
        user_type.value == 0
     )return alert("é necessário aceitar os termos para continuar")
-    
+
     let resposta = await fetch(url,{
         method:"POST",
         body:JSON.stringify(
             {
                 "name": name.value,
                 "email":email.value,
-                "user_type_id":user_type.value,
+                "user_type_id":1,
                 "password":senha.value,
                 "cpf_cnpj":cpf_cnpj.value,
                 "terms": 1,
@@ -39,12 +39,18 @@ async function cadastroUsuario(){
         }        
     });
 
-    let data = await resposta.json();
+    let respostaApi = await resposta.json();
     
-    if(resposta.status != 200){
-        alert(data.data.errors);
+    if(respostaApi.data.statusCode == 422){
+        if(respostaApi.data.errors.email){
+            alert(respostaApi.data.errors.email[0])
+        }
+        if(respostaApi.data.errors.cpf_cnpj){
+            alert(respostaApi.data.errors.cpf_cnpj[0])
+        }
         return;
     }
+
     alert("Cadastro feito com sucesso");
     window.location.href = "login.html";
 }

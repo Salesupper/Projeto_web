@@ -1,6 +1,7 @@
 const url = 'https://api-go-wash-efc9c9582687.herokuapp.com/api/user';
 
 async function cadastroUsuario(){   
+
     var name = document.getElementById('name'); 
     var email = document.getElementById('email')    
     var cpf_cnpj = document.getElementById('cpf_cnpj')
@@ -39,11 +40,17 @@ async function cadastroUsuario(){
         }        
     });
 
-    let data = await resposta.json();
+    let respostaApi = await resposta.json();
     
-    if(resposta.status != 200){
-        alert(data.data.errors);
-        return;
+    if(respostaApi.data.statusCode == 422){
+        if(respostaApi.data.errors.email){
+            alert(respostaApi.data.errors.email[0])
+        }
+        if(respostaApi.data.errors.cpf_cnpj){
+            alert(respostaApi.data.errors.cpf_cnpj[0])
+        }
+
+        return
     }
     alert("Cadastro feito com sucesso");
     window.location.href = "login.html";

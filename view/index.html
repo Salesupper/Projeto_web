@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Wave</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <style>
+        .container header ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .container header ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .slider-planos {
+            margin: 0 auto; 
+            max-width: 900px; 
+            overflow: hidden; 
+            position: relative; 
+        }
+
+        .slider-planos img {
+            width: auto; 
+            max-height: 400px;
+            margin-right: 20px; 
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+        }
+
+        .slider-planos img:hover {
+            transform: scale(1.1); 
+        }
+
+        .slick-prev,
+        .slick-next {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1000; 
+            cursor: pointer; 
+            background-size: cover;
+            font-size: 0; 
+        }
+
+        .slick-prev {
+            background-image: url(../Projeto_web/images/seta-esquerda.png);
+            border: hidden;
+        }
+        
+        .slick-next { 
+            background-image: url('../Projeto_web/images/seta-direita.png');
+            border: hidden;
+            right: 35px;
+        }
+
+        .slider-planos:hover .slick-prev,
+        .slider-planos:hover .slick-next {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/wave.png">
+            <ul>
+                <li><a href="./view/cadastro.html">Cadastro</a></li>
+                <li><a href="./view/login.html">Login</a></li>
+            </ul>
+        </header>
+        <main></main>
+        <aside>
+        </aside>
+        <footer></footer>
+    </div>
+
+    <div class="slider-planos">
+        <a href="./view/login.html"><img src="./images/prod1.jpeg" /></a>
+        <a href="./view/login.html"><img src="./images/prod2.jpeg" /></a>
+        <a href="./view/login.html"><img src="./images/prod3.jpeg" /></a>
+        <a href="./view/login.html"><img src="./images/prod4.jpeg" /></a>
+        <a href="./view/login.html"><img src="./images/prod5.jpeg" /></a>
+        <a href="./view/login.html"><img src="./images/prod6.jpeg" /></a>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider-planos').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true, 
+                variableHeight: true 
+            });
+        });
+    </script>
+</body>
+</html>

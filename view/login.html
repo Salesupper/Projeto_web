@@ -1,40 +1,24 @@
 <html>
-
-<head>
+  <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
-    <link rel="stylesheet" href="../css/login.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/index.css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
 
-    
-</head>
-
-<body>
+  <body>
     <form id="loginForm">
-        <h3>Login</h3>
-        <input type="text" id="email" name="email" placeholder="Email" />
-        <input type="password" id="senha" name="senha" placeholder="Senha" />
-        <input type="submit" name="acao" value="Enviar" onclick="login()"/>
-        <div id="error-msg" class="error-message"></div>
+      <h3>Login</h3>
+      <input type="text" id="email" name="email" placeholder="Email" />
+      <input type="password" id="senha" name="senha" placeholder="Senha" />
+      <input type="submit" name="acao" value="Enviar" id="submit" />
+      <div id="error-msg" class="error-message"></div>
     </form>
 
-    <script>
-        // document.getElementById("loginForm").addEventListener("submit", function(event) {
-        //     event.preventDefault();
-        //     var email = document.getElementById("email").value;
-        //     var senha = document.getElementById("senha").value;
-        //     var errorMsg = document.getElementById("error-msg");
-
-        //     if (email.trim() === "" || senha.trim() === "") {
-        //         errorMsg.textContent = "Por favor, preencha todos os campos.";
-        //     } else {
-        //         if (email === "usuario@example.com" && senha === "senha123") {
-        //             console.log("Login bem-sucedido!");
-        //         } else {
-        //             errorMsg.textContent = "Credenciais de login inválidas.";
-        //         }
-        //     }
-        // });
-    </script>
-</body>
-
+    <script src="../script/login.js"></script>
+  </body>
 </html>

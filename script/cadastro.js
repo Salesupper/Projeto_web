@@ -1,4 +1,4 @@
-const url = 'https://api-go-wash-efc9c9582687.herokuapp.com/api/user';
+const url = 'https://go-wash-api.onrender.com/api/user';
 
 async function cadastroUsuario(){   
     var name = document.getElementById('name'); 
@@ -7,7 +7,9 @@ async function cadastroUsuario(){
     var user_type = document.getElementById('user_type');
     var aniversario = document.getElementById('birthday');
     var senha = document.getElementById('password') 
-   
+    
+    var regex = /^\d{6,}$/;
+    
     if (
         !name.value || 
         !email.value ||
@@ -20,6 +22,10 @@ async function cadastroUsuario(){
     if (
        user_type.value == 0
     )return alert("é necessário aceitar os termos para continuar")
+    
+    if (regex.test(senha.value) == false){
+        return alert("a senha precisa ter no mínimo 6 digitos")
+    }
 
     let resposta = await fetch(url,{
         method:"POST",

@@ -1,61 +1,45 @@
-body{
-  background-image: url('../images/guy_water.jpg');  
+body {
+  background-image: url("../images/Backgroung.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   color: white;
   display: flexbox;
+  overflow-x: hidden;
 }
 
-a, ul {
+a,
+ul {
   color: white;
   list-style: none;
   text-decoration: none;
+  font-size: 25;
+  position: relative;
+  right: 30;
 }
 
 header > ul {
   display: flex;
-  padding: 10px;  
+  padding: 10px;
 }
 
-li{
-  margin-left: 20px;  
+li {
+  margin-left: 20px;
 }
 
-/* .container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10vh 70vh 20vh;
-} */
-
-header{
+header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  background-color: blue;  
+  background-color: rgba(136, 216, 248, 0.788);
   grid-column: 1/4;
-  padding: 10px;  
+  padding: 10px;
 }
 
-main{
-  background-color: chartreuse;  
+main {
+  background-color: chartreuse;
 }
 
-img{
+img {
   width: 100px;
-  height: 100px;
 }
-
-/* aside{
-  background-color: black;  
-  grid-column: 2/4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-
-/* footer{
-  background-color: rgb(246, 9, 9);
-  grid-column: 1/4;
-} */
-
-
